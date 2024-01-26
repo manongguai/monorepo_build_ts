@@ -1,12 +1,20 @@
 {
   "name": "@issue-vite-pnpm/lib",
   "private": true,
-  "type": "module",
   "version": "0.0.0",
+  "main": "myPlugin.js",
+  "types": "myPlugin.d.ts",
+  "files": ["myPlugin.js","myPlugin.d.ts"],
+  "scripts": {
+    "build": "tsc && esbuild myPlugin.ts --bundle --outfile=myPlugin.js --platform=node"
+  },
   "devDependencies": {
     "vite": "^4.2.0"
   },
   "peerDependencies": {
     "vite": "^4.2.0"
+  },
+  "dependencies": {
+    "esbuild": "^0.19.12"
   }
 }

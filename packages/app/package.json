@@ -10,6 +10,8 @@
   "devDependencies": {
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
-    "@issue-vite-pnpm/lib": "workspace:*"
+    "@issue-vite-pnpm/lib": "workspace:*",
+    "p1": "workspace:*",
+    "@millipede/viteconfig":"workspace:*"
   }
 }

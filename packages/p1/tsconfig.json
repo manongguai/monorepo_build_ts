@@ -14,8 +14,9 @@
     "noImplicitReturns": true,
     "skipLibCheck": true,
     "declaration": true,
+    "declarationDir": "./dist"
   },
   "include": [
-    "myPlugin.ts"
+    "src/**/*.ts"
 	]
 }

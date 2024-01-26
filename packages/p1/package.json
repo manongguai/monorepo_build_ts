@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && esbuild src/index.ts --bundle --outfile=dist/index.js --platform=node"
+    "build": "tsc && esbuild src/index.ts --bundle --outfile=dist/index.js --platform=neutral"
   },
   "keywords": [],
   "author": "",

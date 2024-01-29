@@ -2,12 +2,23 @@
   "name": "@millipede/viteconfig",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.cjs",
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "types": "./dist/index.d.ts",
   "type": "module",
+  "exports":{
+    ".": {
+      "import": {
+        "node": "./dist/index.esm.js",
+        "default":"./dist/index.esm.js"
+      },
+      "require": {
+        "node": "./dist/index.umd.js",
+        "default":"./dist/index.umd.js"
+      }
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && rollup -c"

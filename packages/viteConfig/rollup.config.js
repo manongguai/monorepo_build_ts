@@ -8,13 +8,21 @@ import globals from "rollup-plugin-node-globals";
 export default {
   input: "src/index.ts",
  
-  output: {
-    file: "dist/index.cjs",
-    format: "cjs",
-  },
+  output: [
+    {
+      file: "dist/index.umd.js",
+      format: "umd",
+      name:'@millipede/viteconfig'
+    },{
+      file: "dist/index.esm.js",
+      format: "esm",
+    }
+  ],
   plugins: [
     // builtins，globals 处理.node文件的报错
-    nodeResolve(),
+    nodeResolve({
+      browser: true,
+    }),
     commonjs(),
     typescript(),
     builtins(), 
